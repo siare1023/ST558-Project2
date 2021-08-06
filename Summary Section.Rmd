@@ -1,0 +1,48 @@
+---
+title: "Summary Section Possibilities"
+author: "Tyler Pollard"
+date: "7/1/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+## Summary Statistics
+### Categorical Variables
+1. Contingency tables
+  * `weathersit` # see the total number of different days with weather situations **(tyler)**
+  * `season` and `casual` or `count` # see how the number of riders change over the seasons
+  * `year` and `registered` or `count` # see how the number of riders change by year  **(lucy)**
+  * `workingday` and `casual` # see how the number of riders change based on workday vs weekend/holiday  **(lucy)**
+  
+### Quantitative Variables
+1. Create summary tables for (possibly include sd)
+  * `temp` 
+  * `atemp` **(tyler)**
+  * `humidity` **(lucy)**
+  * `windspeed` **(lucy)**
+
+## Plots
+### Barplots
+1. `weathersit` # shows the counts for different weather situations
+
+### Histograms
+1. y = `count`, x = `year` # show distribution of count over the year (increase)
+2. y = `atemp`, x = `month` # show weather distribution of year **(tyler)**
+3. y = `count`, x = `month` # stacked of registered as bottom part of bar and casual as top to show spontaneity of riders **(lucy)**
+
+### Boxplots
+1. `count` parsed by `season` # show the number spread based on season **(tyler)**
+2. `casual` parsed by `workingday` # show spread of riders based on working or not  
+2b. `casual` and `registered` faceted and parsed by `workingday` # shows the spontaneity of riders based on workday **(lucy)**
+
+### Scatter plots
+1. `atemp` vs `temp` # show relation between two variables and may reference later why we remove one predictor based on collinearity 
+2. `atemp` vs `humidity` # show relation between two variables and may reference later why we remove one predictor based on collinearity  **(lucy)**
+3. `atemp` vs `windspeed` and `atemp` vs `humidity` faceted # show which weather aspect affects the absolute temp more **(tyler)**
+4. `weathersit` vs `humidity` color by windspeed # show how these weather aspects affect weather situation ranking, may want to cut the windspeed into ranges  **(lucy)**
+
+
+
